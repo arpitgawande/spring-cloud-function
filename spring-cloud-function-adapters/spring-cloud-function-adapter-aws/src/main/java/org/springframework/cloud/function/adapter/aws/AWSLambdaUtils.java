@@ -151,7 +151,8 @@ public final class AWSLambdaUtils {
 			if (outputClassName.equals("com.amazonaws.services.lambda.runtime.events.APIGatewayV2HTTPResponse") ||
 				outputClassName.equals("com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent") ||
 				outputClassName.equals("com.amazonaws.services.lambda.runtime.events.ApplicationLoadBalancerResponseEvent") ||
-				outputClassName.equals("com.amazonaws.services.lambda.runtime.events.IamPolicyResponse")) {
+				outputClassName.equals("com.amazonaws.services.lambda.runtime.events.IamPolicyResponse") ||
+			   	outputClassName.equals("com.amazonaws.services.lambda.runtime.events.IamPolicyResponseV1")) {
 				return extractPayload((Message<Object>) responseMessage, objectMapper);
 			}
 		}
